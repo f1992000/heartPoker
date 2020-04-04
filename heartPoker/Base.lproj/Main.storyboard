@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Play Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlayGameViewController" customModule="heartPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="♠️2" translatesAutoresizingMaskIntoConstraints="NO" id="yXH-Kg-dsh">
+                                <rect key="frame" x="107" y="379" width="200" height="286"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fUd-pM-noH"/>
+                                    <constraint firstAttribute="height" constant="286" id="rVK-YU-Ed9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puV-ao-fkV">
+                                <rect key="frame" x="107" y="219" width="200" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ajs-BF-JiT"/>
+                                    <constraint firstAttribute="width" constant="200" id="g7y-1s-dnl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handBack" translatesAutoresizingMaskIntoConstraints="NO" id="W2q-Pi-Tm6">
+                                <rect key="frame" x="138.5" y="44" width="137" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Dof-bJ-2o5"/>
+                                    <constraint firstAttribute="width" constant="137" id="S74-KZ-q5P"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handBack" translatesAutoresizingMaskIntoConstraints="NO" id="qoZ-JO-y8b">
+                                <rect key="frame" x="138.5" y="702" width="137" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="H75-TY-hPv"/>
+                                    <constraint firstAttribute="width" constant="137" id="HOZ-yz-08M"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="yXH-Kg-dsh" firstAttribute="top" secondItem="puV-ao-fkV" secondAttribute="bottom" id="2tk-L8-wy8"/>
+                            <constraint firstItem="yXH-Kg-dsh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7dW-X6-fJw"/>
+                            <constraint firstItem="W2q-Pi-Tm6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BwA-uz-Z9m"/>
+                            <constraint firstItem="W2q-Pi-Tm6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IkU-bq-N89"/>
+                            <constraint firstItem="puV-ao-fkV" firstAttribute="top" secondItem="W2q-Pi-Tm6" secondAttribute="bottom" constant="15" id="Lm1-j2-3S5"/>
+                            <constraint firstItem="puV-ao-fkV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OJU-Kw-ufG"/>
+                            <constraint firstItem="qoZ-JO-y8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mTP-oK-FcH"/>
+                            <constraint firstItem="qoZ-JO-y8b" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t2R-cr-PSA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BX7-yY-eHM" appends="YES" id="Vfr-WD-hwd"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="g7I-s2-MQ8"/>
+                    <connections>
+                        <outlet property="computerHand" destination="W2q-Pi-Tm6" id="Jfs-c5-ADy"/>
+                        <outlet property="pokerImageView" destination="yXH-Kg-dsh" id="fPm-BF-wgS"/>
+                        <outlet property="showGameNumber" destination="puV-ao-fkV" id="CZS-W0-FsX"/>
+                        <outlet property="userHand" destination="qoZ-JO-y8b" id="LLc-fG-g3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BX7-yY-eHM">
+                    <connections>
+                        <action selector="gamerTap:" destination="BYZ-38-t0r" id="TQ5-sp-wE8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="handBack" width="510" height="594"/>
+        <image name="♠️2" width="105" height="150"/>
+    </resources>
+</document>
